@@ -28,3 +28,12 @@ The compound Boolean decision selected for analysis is in the
 
 ```java
 if ((item != null) && (this.balance >= item.getPrice()))
+
+## Test-Sensitivity Experiment
+
+A temporary fault was introduced into the `makePurchase()` method by
+changing the balance comparison from `>=` to `>`:
+
+```java
+// INJECTED FAULT FOR COVERAGE EXPERIMENT
+if ((item != null) && (this.balance > item.getPrice())) {
